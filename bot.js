@@ -13,18 +13,18 @@ venom
 
 function start(client) {
   client.onMessage((message) => {
-    if (message.body.toLowerCase() === 'hello') {
+    if (message.body.toLowerCase() === 'Olá') {
       client
-        .sendText(message.from, 'Hi there!')
+        .sendText(message.from, 'Seja bem vindo!')
         .then((result) => {
           console.log('Result: ', result); // Retorno de sucesso
         })
         .catch((erro) => {
           console.error('Error when sending: ', erro); // Retorno de erro
         });
-    } else if (message.body.toLowerCase() === 'how are you') {
+    } else if (message.body.toLowerCase() === 'tudo bem?') {
       client
-        .sendText(message.from, 'I am a bot, I am always fine. How can I help you today?')
+        .sendText(message.from, 'Sou seu assistente virtual como posso te ajuda?')
         .then((result) => {
           console.log('Result: ', result); // Retorno de sucesso
         })
@@ -33,7 +33,7 @@ function start(client) {
         });
     } else {
       client
-        .sendText(message.from, "Sorry, I didn't understand that.")
+        .sendText(message.from, "Desculpe, não entendi o que você disse. Digite novamente")
         .then((result) => {
           console.log('Result: ', result); // Retorno de sucesso
         })
